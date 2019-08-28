@@ -1,13 +1,3 @@
-let http = require("http");
+const server = require("./server");
 
-function trataRequisicao(req, res) {
-    res.writeHead(200, {"Content-Type":"text/html"});
-    res.write("<h1>Hello World!");
-    res.end();
-}
-
-let server = http.createServer(trataRequisicao);
-
-server.listen(8888);
-
-console.log("Servidor na porta http://localhost:8888");
+server.start();
